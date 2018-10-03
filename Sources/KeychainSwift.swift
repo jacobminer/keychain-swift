@@ -94,7 +94,8 @@ open class KeychainSwift {
       KeychainSwiftConstants.klass       : kSecClassGenericPassword,
       KeychainSwiftConstants.attrAccount : prefixedKey,
       KeychainSwiftConstants.valueData   : value,
-      KeychainSwiftConstants.accessible  : accessible
+      KeychainSwiftConstants.accessible  : accessible,
+      KeychainSwiftConstants.attrService : kSecAttrService
     ]
       
     query = addAccessGroupWhenPresent(query)
@@ -168,7 +169,8 @@ open class KeychainSwift {
       KeychainSwiftConstants.klass       : kSecClassGenericPassword,
       KeychainSwiftConstants.attrAccount : prefixedKey,
       KeychainSwiftConstants.returnData  : kCFBooleanTrue,
-      KeychainSwiftConstants.matchLimit  : kSecMatchLimitOne
+      KeychainSwiftConstants.matchLimit  : kSecMatchLimitOne,
+      KeychainSwiftConstants.attrService : kSecAttrService
     ]
     
     query = addAccessGroupWhenPresent(query)
